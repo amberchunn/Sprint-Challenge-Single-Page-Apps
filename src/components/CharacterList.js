@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export default function CharacterList() {
+export default function CharacterList(props) {
 	// TODO: Add useState to track data from useEffect
 
 	const [character, setcharacter] = useState([]);
