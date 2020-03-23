@@ -71,7 +71,7 @@ _Display Data from a Server API_
 _Add a Router to this application using [React Router](https://reacttraining.com/react-router/web/guides/quick-start)._
 
 -   [x] Hook up the Welcome page(Home page) and a Characters page with React Router.
--   [ ] Use a styling or component library for part of or all of your application. (Pick at least 1 of: [s](https://react-bootstrap.github.io/)tyled-components or Reactstrap).
+-   [x] Use a styling or component library for part of or all of your application. (Pick at least 1 of: [s](https://react-bootstrap.github.io/)tyled-components or Reactstrap).
 
 _Add 'Search by Name' feature._
 
@@ -87,6 +87,14 @@ _Add 'Search by Name' feature._
 -   [x] Schedule time to review, refine and reassess your work.
 
 It is better to submit a challenge that meets [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) than one that attempts too much and fails.
+
+# Color Scheme
+
+-   Light Purple: #82708A
+-   Dark Purple: #563440
+-   Green: #D3D57C
+-   Pink: #E15A97
+-   Teal: #3A606E
 
 ---
 

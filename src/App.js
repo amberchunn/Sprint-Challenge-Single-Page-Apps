@@ -7,8 +7,6 @@ import SearchForm from './components/SearchForm';
 import CharacterList from './components/CharacterList.js';
 import WelcomePage from './components/WelcomePage.js';
 
-import styled from 'styled-components';
-
 export default function App(props) {
 	const [character, setCharacter] = useState([]);
 	const [query, setQuery] = useState('');
@@ -36,9 +34,9 @@ export default function App(props) {
 	return (
 		<main data-testid="app">
 			<Header />
-			<SearchForm data={character} handleChange={handleChange} />
 			<Route exact path="/" component={WelcomePage} />
 			<Route path="/CharacterList">
+				<SearchForm data={character} handleChange={handleChange} />
 				<CharacterList data={character} filtered={filtered} />
 			</Route>
 		</main>

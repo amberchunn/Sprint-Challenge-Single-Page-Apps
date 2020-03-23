@@ -1,8 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 
 export default function CharacterCard(props) {
+	const CharCard = styled.div`
+		font-family: 'Baloo 2', cursive;
+	`;
 	return (
-		<div className="char-card">
+		<CharCard>
 			<img src={props.image} alt={props.name} />
 			<div className="char-info">
 				<h3 className={props.id}>{props.name}</h3>
@@ -11,6 +15,6 @@ export default function CharacterCard(props) {
 					<a href={props.worldUrl}>{props.world}</a>
 				</p>
 			</div>
-		</div>
+		</CharCard>
 	);
 }

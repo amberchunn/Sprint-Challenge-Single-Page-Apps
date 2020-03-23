@@ -1,22 +1,34 @@
 import React from 'react';
+import styled from 'styled-components';
 
 export default function WelcomePage(props) {
+	const Welcome = styled.section`
+		font-family: 'Baloo 2', cursive;
+		font-size: 2rem;
+		line-height: 2.75rem;
+		font-color: #333;
+		padding: 50px;
+		p {
+			margin: 20px 0;
+		}
+		img {
+			margin: 0 auto;
+			display: block;
+			width: 100%;
+		}
+	`;
+	const Credit = styled.p`
+		font-size: 1.25rem;
+		font-style: italic;
+		margin: 0;
+		padding: 0;
+	`;
 	return (
-		<section className="welcome-page">
-			<h2>The Philosophy of Rick & Morty</h2>
+		<Welcome>
 			<img
-				src="https://upload.wikimedia.org/wikipedia/en/b/b0/Rick_and_Morty_characters.jpg"
+				src="https://pbs.twimg.com/media/EJqehYkXsAY3Bkn?format=jpg&name=medium"
 				alt="Rick and Morty Family"
 			/>
-			<p className="credit">
-				<a
-					href="https://en.wikipedia.org/wiki/Rick_and_Morty"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Source: Rick & Morty - Wikipedia
-				</a>
-			</p>
 			<p>
 				Rick and Morty has been described as "a never-ending fart joke wrapped
 				around a studied look into nihilism". The series addresses the
@@ -45,6 +57,15 @@ export default function WelcomePage(props) {
 				sinking into depression, Morty accepts these truths that empower him to
 				value his own life.
 			</p>
-		</section>
+			<Credit>
+				<a
+					href="https://en.wikipedia.org/wiki/Rick_and_Morty"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Source: Rick & Morty - Wikipedia
+				</a>
+			</Credit>
+		</Welcome>
 	);
 }
