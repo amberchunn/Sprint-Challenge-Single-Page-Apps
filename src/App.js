@@ -14,7 +14,6 @@ export default function App(props) {
 	const [query, setQuery] = useState('');
 
 	useEffect(() => {
-		// const id = props.match.params.id;
 		axios
 			.get(
 				`https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/`
@@ -27,7 +26,13 @@ export default function App(props) {
 			});
 	}, []);
 
-	// console.log(character);
+	const handleChange = event => {
+		return setQuery(event.target.value);
+	};
+
+	const filtered = character.filter(char => {
+		return char.name.toLowerCase().includes(query.toLowerCase());
+	});
 	return (
 		<main data-testid="app">
 			<nav id="navigation">
@@ -35,10 +40,10 @@ export default function App(props) {
 				<Link to="/CharacterList">Characters</Link>
 			</nav>
 			<Header />
-			<SearchForm data={character} query={query} />
+			<SearchForm data={character} handleChange={handleChange} />
 			<Route path="/" component={WelcomePage} />
 			<Route path="/CharacterList">
-				<CharacterList data={character} query={query} />
+				<CharacterList data={character} filtered={filtered} />
 			</Route>
 		</main>
 	);
