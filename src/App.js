@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import axios from 'axios';
 
 import Header from './components/Header.js';
@@ -35,13 +35,9 @@ export default function App(props) {
 	});
 	return (
 		<main data-testid="app">
-			<nav id="navigation">
-				<Link to="/">Welcome</Link>
-				<Link to="/CharacterList">Characters</Link>
-			</nav>
 			<Header />
 			<SearchForm data={character} handleChange={handleChange} />
-			<Route path="/" component={WelcomePage} />
+			<Route exact path="/" component={WelcomePage} />
 			<Route path="/CharacterList">
 				<CharacterList data={character} filtered={filtered} />
 			</Route>

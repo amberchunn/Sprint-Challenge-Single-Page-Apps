@@ -1,12 +1,16 @@
 import React from 'react';
-// import CharacterList from './CharacterList';
 
 export default function CharacterCard(props) {
-	console.log(props);
 	return (
-		<li key={props.id}>
-			{props.image}
-			{props.name}, {props.species} from <a href={props.worldUrl}>{props.world}</a>
-		</li>
+		<div className="char-card">
+			<img src={props.image} alt={props.name} />
+			<div className="char-info">
+				<h3 className={props.id}>{props.name}</h3>
+				<h4 className="species">Species: {props.species}</h4>
+				<p className="homeworld">
+					<a href={props.worldUrl}>{props.world}</a>
+				</p>
+			</div>
+		</div>
 	);
 }

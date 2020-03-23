@@ -4,7 +4,7 @@ import CharacterCard from './CharacterCard';
 export default function CharacterList(props) {
 	// TODO: Add useState to track data from useEffect
 
-	const list = props.filtered.map(item => {
+	const cardList = props.filtered.map(item => {
 		return (
 			<CharacterCard
 				key={item.id}
@@ -16,12 +16,7 @@ export default function CharacterList(props) {
 			/>
 		);
 	});
-	return (
-		<section className="character-list">
-			<h2>Characters</h2>
-			<ul>{list}</ul>
-		</section>
-	);
+	return <section className="character-list">{cardList}</section>;
 }
 
 // Why can't you setCharacter outside of axios call?
