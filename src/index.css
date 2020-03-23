@@ -185,11 +185,16 @@ section form {
 
 form label {
   display: block;
+  font-family: 'Baloo 2',
+    cursive;
+  font-weight: 700;
+  text-transform: uppercase;
   margin: 20px auto 5px auto;
 }
 
 form input {
   width: 250px;
+  font-size: 2rem;
   padding: 15px;
   border-radius: 5px;
 }
