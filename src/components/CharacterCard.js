@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Modal } from 'semantic-ui-react';
+import React from 'react';
 import styled from 'styled-components';
 
 export default function CharacterCard(props) {
@@ -39,35 +38,19 @@ export default function CharacterCard(props) {
 		text-align: center;
 		font-size: 2rem;
 	`;
-	const [modal, setModal] = useState(false);
-
-	const handleOpen = event => {
-		if (!modal) {
-			setModal(true);
-		}
-		return modal;
-	};
-	// const handleClose = () => setModal({ modal: false });
 
 	return (
-		<Modal
-			trigger={
-				<CharCard onClick={handleOpen}>
-					<h3 className={props.id}>{props.name}</h3>
-					<img src={props.image} alt={props.name} />
-				</CharCard>
-			}
-		>
-			<Modal.Header>Character Information</Modal.Header>
-			<Modal.Content>
+		<>
+			<CharCard>
+				<h3 className={props.id}>{props.name}</h3>
+				<img src={props.image} alt={props.name} />
 				<CharInfo>
-					<h3>{props.name}</h3>
 					<h4 className="species">Species: {props.species}</h4>
 					<p className="homeworld">
 						<a href={props.worldUrl}>{props.world}</a>
 					</p>
 				</CharInfo>
-			</Modal.Content>
-		</Modal>
+			</CharCard>
+		</>
 	);
 }

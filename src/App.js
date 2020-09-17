@@ -16,19 +16,19 @@ export default function App(props) {
 			.get(
 				`https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/`
 			)
-			.then(response => {
+			.then((response) => {
 				setCharacter(response.data.results);
 			})
-			.catch(error => {
+			.catch((error) => {
 				console.error(error);
 			});
 	}, []);
 
-	const handleChange = event => {
+	const handleChange = (event) => {
 		return setQuery(event.target.value);
 	};
 
-	const filtered = character.filter(char => {
+	const filtered = character.filter((char) => {
 		return char.name.toLowerCase().includes(query.toLowerCase());
 	});
 	return (
