@@ -27,7 +27,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 -   [x] Explain benefit(s) using `client-side routing`?
 
-> Answer: There are two main benefits to using client-side routing. First, you will have faster transitions between pages. Second, the page will not refresh in between views. This allows more complex features to run smoother and things like Animations or Photo Galleries will run smoother.
+-   [x]Answer:
+    There are two main benefits to using client-side routing. First, you will have faster transitions between pages. Second, the page will not refresh in between views. This allows more complex features to run smoother and things like Animations or Photo Galleries will run smoother.
 
 ## Project Set Up
 
@@ -71,7 +72,7 @@ _Display Data from a Server API_
 _Add a Router to this application using [React Router](https://reacttraining.com/react-router/web/guides/quick-start)._
 
 -   [x] Hook up the Welcome page(Home page) and a Characters page with React Router.
--   [x] Use a styling or component library for part of or all of your application. (Pick at least 1 of: [s](https://react-bootstrap.github.io/)tyled-components or Reactstrap).
+-   [x] Use a styling or component library for part of or all of your application. (Pick at least 1 of: (https://react-bootstrap.github.io/)styled-components or Reactstrap).
 
 _Add 'Search by Name' feature._
 

@@ -38,16 +38,19 @@ export default function CharacterCard(props) {
 		text-align: center;
 		font-size: 2rem;
 	`;
+
 	return (
-		<CharCard>
-			<h3 className={props.id}>{props.name}</h3>
-			<img src={props.image} alt={props.name} />
-			<CharInfo>
-				<h4 className="species">Species: {props.species}</h4>
-				<p className="homeworld">
-					<a href={props.worldUrl}>{props.world}</a>
-				</p>
-			</CharInfo>
-		</CharCard>
+		<>
+			<CharCard>
+				<h3 className={props.id}>{props.name}</h3>
+				<img src={props.image} alt={props.name} />
+				<CharInfo>
+					<h4 className="species">Species: {props.species}</h4>
+					<p className="homeworld">
+						<a href={props.worldUrl}>{props.world}</a>
+					</p>
+				</CharInfo>
+			</CharCard>
+		</>
 	);
 }
